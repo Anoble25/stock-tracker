@@ -1,31 +1,17 @@
-# Stock Dividend Tracker #
+# stock-tracker #
 
 #### By _**Alex Noble**_ 6/29/18
 
 ## Description ##
 
-A web application that shows realtime stock info.
+a data visualization website based on user inputted stocks.
 
 ## Setup ##
 
-Clone the repo with
-
-`git clone https://github.com/Anoble25/stock-tracker.git`
-
-Navigate to the directory stock-tracker with
-
-`cd stock-tracker`
-
-and run the command
-
-`npm install`
-
-You can start the project with
-
-`npm run start`
+Clone the repo with `git clone https://github.com/Anoble25/stock-tracker.git` Navigate to the directory stock-tracker with `cd stock-tracker` and run the command `npm install` You can start the project with `npm run start`
 
 ## Specifications ##
-This web application will take user input for stock symbols and return stock market data received through a free API.
+web app will take user input for stock symbols and return stock market data received through a free API.
 
 ## Known Bugs
 
