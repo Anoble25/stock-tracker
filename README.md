@@ -25,4 +25,4 @@ _No known bugs_
 
 ##### License
 
-stock-tracker is [MIT licensed](./LICENSE).
+stock-tracker is MIT licensed.
