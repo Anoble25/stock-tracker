@@ -14,6 +14,10 @@ a data visualization website based on user inputted stocks.
 ## Specifications ##
 web app will take user input for stock symbols and return stock market data received through a free API.
 
+
+![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+
+
 ## Technologies Used
 * HTML5/CSS
 * Javascript
