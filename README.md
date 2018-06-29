@@ -15,7 +15,7 @@ a data visualization website based on user inputted stocks.
 web app will take user input for stock symbols and return stock market data received through a free API.
 
 
-![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+![picture alt](stock-tracker-component-structure.png "Stock Tracker Component Structure Diagram")
 
 
 ## Technologies Used
