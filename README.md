@@ -14,18 +14,15 @@ a data visualization website based on user inputted stocks.
 ## Specifications ##
 web app will take user input for stock symbols and return stock market data received through a free API.
 
-## Known Bugs
-
-_No known bugs_
-
 ## Technologies Used
 * HTML5/CSS
 * Javascript
 * npm (Node Package Manager)
 * react
 
-### License
+##### Known Bugs
+_No known bugs_
 
-*This software is licensed under the MIT license.*
+##### License
 
-Copyright (c) 2018 **_Alex Noble_**
+stock-tracker is [MIT licensed](./LICENSE).
