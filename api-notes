@@ -1,0 +1,12 @@
+
+example link:
+https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl,fb,tsla&types=quote,news,chart&range=1m&last=5
+
+apple quote only:
+https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl&types=quote&last=5
+
+stockSymbol
+companyName
+primaryExchange
+sector
+latestPrice

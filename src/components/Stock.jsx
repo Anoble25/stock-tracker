@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Stock(props){
   return (
     <div>
-      <h3>{props.location} - {props.names}</h3>
+      <h3>{props.stockSymbol}</h3>
       <h4>{props.formattedWaitTime}</h4>
-      <p><em>{props.issue}</em></p>
+      // <p><em>{props.issue}</em></p>
       <hr/>
     </div>
   );
@@ -14,7 +14,7 @@ function Stock(props){
 
 
 Stock.propTypes = {
-  names: PropTypes.string.isRequired,
+  stockSymbol: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   issue: PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,

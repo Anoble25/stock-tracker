@@ -4,13 +4,19 @@ import { v4 } from 'uuid';
 import Moment from 'moment';
 
 function NewStockForm(props){
-  let _names = null;
-  let _location = null;
-  let _issue = null;
+  let _stockSymbol = null;
+  let _companyName = null;
+  let _primaryExchange = null;
+  let _sector = null;
+  let _latestPrice = null;
+  let _location=null;
+  let _issue=null;
+  let _names=null;
 
-  function handleNewStockFormSubmission(event){
+  function handleNewStockFormSubmission(event)
+  {
     event.preventDefault();
-    props.onNewStockCreation({names:_names.value, location:_location.value, issue:_issue.value, id: v4(), timeOpen: new Moment()});
+    props.onNewStockCreation({stockSymbol:_stockSymbol.value, id: v4(), timeOpen: new Moment()});
     _names.value = '';
     _location.value = '';
     _issue.value = '';
@@ -21,9 +27,9 @@ function NewStockForm(props){
       <form onSubmit={handleNewStockFormSubmission}>
         <input
           type='text'
-          id='names'
-          placeholder='Pair Names'
-          ref={(input) => {_names = input;}}/>
+          id='stockSymbol'
+          placeholder='Stock Symbol'
+          ref={(input) => {_stockSymbol = input;}}/>
         <input
           type='text'
           id='location'

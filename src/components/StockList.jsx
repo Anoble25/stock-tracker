@@ -7,9 +7,9 @@ function StockList(props){
     <div>
       <hr/>
       {props.stockList.map((stock) =>
-        <Stock names={stock.names}
-          location={stock.location}
-          issue={stock.issue}
+        <Stock stockSymbol={stock.stockSymbol}
+          // location={stock.location}
+          // issue={stock.issue}
           formattedWaitTime={stock.formattedWaitTime}
           key={stock.id}/>
       )}
