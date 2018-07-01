@@ -53,6 +53,16 @@ module.exports = {
             "react-hot-loader/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
     ]
   },
