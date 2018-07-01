@@ -7,9 +7,9 @@ import { HashRouter } from 'react-router-dom';
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      // <HashRouter>
+      <HashRouter>
         <Component/>
-      // </HashRouter>
+      </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
   );
