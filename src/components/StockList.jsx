@@ -2,6 +2,17 @@ import React from 'react';
 import Stock from './Stock';
 import PropTypes from 'prop-types';
 
+{/*var sampleStockList = [{
+  stockSymbol: 'AAPL',
+  companyName: 'Apple',
+  sector:'Technology',
+  latestPrice: '190.34',
+  lastUpdated: 'today',
+  key: '1'
+}];*/}
+
+
+
 function StockList(props){
   return (
     <div>
