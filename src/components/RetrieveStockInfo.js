@@ -1,17 +1,26 @@
 import React, {Component} from 'react';
 
 
+
+
+
 class RetrieveStockInfo extends React.Component {
   constructor(props) {
+
     super(props);
     this.state = {
       error: null,
       isLoaded: false,
       data: []
     };
+
+
   }
 
   componentDidMount() {
+
+
+
     fetch('https://api.iextrading.com/1.0/stock/market/batch?symbols=msft&types=quote&last=5')
       .then(res => res.json())
       .then(
@@ -43,12 +52,15 @@ class RetrieveStockInfo extends React.Component {
       return (
         // console.log(data["AAPL"].quote.companyName),
         <ul>
-        {Object.keys(data).map((stock) => {
-          console.log(data[stock]);
-          return <li key={data[stock].quote.symbol}>
-          {data[stock].quote.companyName} {data[stock].quote.sector}
-          </li>
-        })}
+          {Object.keys(data).map((stock) => {
+            console.log(data[stock]);
+            return <li key={data[stock].quote.symbol}>
+              {data[stock].quote.symbol}<br/>
+              {data[stock].quote.companyName}<br/>
+              {data[stock].quote.sector}<br/>
+              {data[stock].quote.latestPrice}<br/>
+            </li>;
+          })}
         </ul>
       );
     }

@@ -19,7 +19,7 @@ class App extends React.Component {
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateStockElapsedWaitTime(),
-    60000
+    90000
     );
   }
 
