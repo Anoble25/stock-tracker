@@ -38,7 +38,7 @@ class App extends React.Component {
 
   handleAddingNewStockToList(newStock){
     var newMasterStockList = this.state.masterStockList.slice();
-    newStock.formattedWaitTime = (newStock.timeOpen).fromNow(true);
+    newStock.lastUpdated= (newStock.timeOpen).fromNow(true);
     newMasterStockList.push(newStock);
     this.setState({masterStockList: newMasterStockList});
   }

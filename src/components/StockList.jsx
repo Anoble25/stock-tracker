@@ -8,9 +8,11 @@ function StockList(props){
       <hr/>
       {props.stockList.map((stock) =>
         <Stock stockSymbol={stock.stockSymbol}
-          // location={stock.location}
-          // issue={stock.issue}
-          formattedWaitTime={stock.formattedWaitTime}
+          companyName={stock.companyName}
+          primaryExchange={stock.primaryExchange}
+          sector={stock.sector}
+          latestPrice={stock.latestPrice}
+          lastUpdated={stock.lastUpdated}
           key={stock.id}/>
       )}
     </div>

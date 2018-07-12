@@ -9,17 +9,12 @@ function NewStockForm(props){
   let _primaryExchange = null;
   let _sector = null;
   let _latestPrice = null;
-  let _location=null;
-  let _issue=null;
-  let _names=null;
 
   function handleNewStockFormSubmission(event)
   {
     event.preventDefault();
     props.onNewStockCreation({stockSymbol:_stockSymbol.value, id: v4(), timeOpen: new Moment()});
-    _names.value = '';
-    _location.value = '';
-    _issue.value = '';
+    _stockSymbol.value = '';
   }
 
   return (
@@ -30,7 +25,7 @@ function NewStockForm(props){
           id='stockSymbol'
           placeholder='Stock Symbol'
           ref={(input) => {_stockSymbol = input;}}/>
-        <input
+        {/*<input
           type='text'
           id='location'
           placeholder='Location'
@@ -38,8 +33,8 @@ function NewStockForm(props){
         <textarea
           id='issue'
           placeholder='Describe your issue.'
-          ref={(textarea) => {_issue = textarea;}}/>
-        <button type='submit'>Help!</button>
+          ref={(textarea) => {_issue = textarea;}}/>*/}
+        <button type='submit'>Add</button>
       </form>
     </div>
   );
