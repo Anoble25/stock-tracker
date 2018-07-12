@@ -12,13 +12,13 @@ class RetrieveStockInfo extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl&types=quote&last=5')
+    fetch('https://api.iextrading.com/1.0/stock/market/batch?symbols=msft&types=quote&last=5')
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            data: result.AAPL.quote
+            data: result
           });
         },
         // Note: it's important to handle errors here
@@ -41,11 +41,14 @@ class RetrieveStockInfo extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        console.log(data),
+        // console.log(data["AAPL"].quote.companyName),
         <ul>
-            <li key={data.symbol}>
-              {data.companyName} {data.sector}
-            </li>
+        {Object.keys(data).map((stock) => {
+          console.log(data[stock]);
+          return <li key={data[stock].quote.symbol}>
+          {data[stock].quote.companyName} {data[stock].quote.sector}
+          </li>
+        })}
         </ul>
       );
     }
