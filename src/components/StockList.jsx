@@ -1,6 +1,7 @@
 import React from 'react';
 import Stock from './Stock';
 import PropTypes from 'prop-types';
+import RetrieveStockInfo from './RetrieveStockInfo';
 
 {/*var sampleStockList = [{
   stockSymbol: 'AAPL',
@@ -11,11 +12,10 @@ import PropTypes from 'prop-types';
   key: '1'
 }];*/}
 
-
-
 function StockList(props){
   return (
     <div>
+      <div><RetrieveStockInfo/></div>
       <hr/>
       {props.stockList.map((stock) =>
         <Stock stockSymbol={stock.stockSymbol}
