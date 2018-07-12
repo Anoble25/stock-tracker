@@ -1,27 +1,23 @@
 import React, {Component} from 'react';
 
 
-
-
-
 class RetrieveStockInfo extends React.Component {
   constructor(props) {
-
     super(props);
+    this.numOfApiCalls=0;
     this.state = {
       error: null,
       isLoaded: false,
       data: []
     };
-
-
   }
 
   componentDidMount() {
 
-
-
     fetch('https://api.iextrading.com/1.0/stock/market/batch?symbols=msft&types=quote&last=5')
+      .then(
+      this.numOfApiCalls++
+    )
       .then(res => res.json())
       .then(
         (result) => {
@@ -40,9 +36,11 @@ class RetrieveStockInfo extends React.Component {
           });
         }
       );
+      console.log(this.numOfApiCalls);
   }
 
   render() {
+    this.numOfApiCalls++
     const { error, isLoaded, data } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
