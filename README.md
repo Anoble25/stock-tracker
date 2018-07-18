@@ -12,7 +12,7 @@ a data visualization website based on user inputted stocks.
 * Start the project with `npm run start`
 
 ## Specifications ##
-web app will take user input for stock symbols and return stock market data received through a free API.
+web app will take user input for stock symbols and return stock market data received through the iex API.
 
 
 ![picture alt](stock-tracker-component-structure.png "Stock Tracker Component Structure Diagram")
